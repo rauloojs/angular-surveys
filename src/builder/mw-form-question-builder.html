@@ -53,14 +53,16 @@
                     </div>
                     <div ng-switch-when="textarea">
                         <!-- <textarea class="form-control" disabled>{{'mwForm.question.preview.textarea'|translate}}</textarea> -->
-                        <md-input-container>
-                            <textarea class="form-control" disabled>{{'mwForm.question.preview.textarea'|translate}}</textarea>
+                        <md-input-container class="md-block">
+                            <textarea class="form-control" md-maxlength="150" rows="5" disabled>{{'mwForm.question.preview.textarea'|translate}}</textarea>
                         </md-input-container>
                     </div>
                     <div ng-switch-when="radio">
+                        <!-- Directive changed -->
                         <mw-question-offered-answer-list-builder question="ctrl.question" form-object="ctrl.formObject" read-only="ctrl.readOnly"></mw-question-offered-answer-list-builder>
                     </div>
                     <div ng-switch-when="checkbox">
+                        <!-- Directive changed -->
                         <mw-question-offered-answer-list-builder question="ctrl.question" form-object="ctrl.formObject" read-only="ctrl.readOnly"></mw-question-offered-answer-list-builder>
                     </div>
                     <div ng-switch-when="priority">

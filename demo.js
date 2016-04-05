@@ -19,10 +19,10 @@ angular.module('app', ['ngMaterial','mwFormBuilder', 'mwFormViewer', 'mwFormUtil
         ctrl.viewerReadOnly = false;
         ctrl.languages = ['en', 'pl', "es"];
         ctrl.formData = {};
-        $http.get('form-data.json')
-            .then(function(res){
-                ctrl.formData = res.data;
-            });
+        // $http.get('form-data.json')
+        //     .then(function(res){
+        //         ctrl.formData = res.data;
+        //     });
         ctrl.formBuilder={};
         ctrl.formViewer = {};
         ctrl.formOptions = {
@@ -38,15 +38,15 @@ angular.module('app', ['ngMaterial','mwFormBuilder', 'mwFormViewer', 'mwFormUtil
         };
         ctrl.formStatus= {};
         ctrl.responseData={};
-        $http.get('response-data.json')
-            .then(function(res){
-                ctrl.responseData = res.data;
-            });
+        // $http.get('response-data.json')
+        //     .then(function(res){
+        //         ctrl.responseData = res.data;
+        //     });
             
-        $http.get('template-data.json')
-            .then(function(res){
-                ctrl.templateData = res.data;
-            });
+        // $http.get('template-data.json')
+        //     .then(function(res){
+        //         ctrl.templateData = res.data;
+        //     });
 
         ctrl.showResponseRata=false;
         ctrl.saveResponse = function(){
