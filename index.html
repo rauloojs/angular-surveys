@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <head>
+        <meta charset="UTF-8">
+        <title>angular-surveys demo</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="../bower_components/angular/angular-csp.css">
+        <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+        <!-- <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="../dist/form-builder.min.css">
+        <link rel="stylesheet" href="../dist/form-viewer.min.css">
+        <link rel="stylesheet" href="demo.css">
+    </head>
+    <body ng-controller="DemoController as ctrl" ng-cloak>
+
+      <!--   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid" style="border-bottom: 1px solid #e7e7e7;" role="presentation">
+                <div class="navbar-header" role="presentation" aria-hidden="true">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><span>angular-surveys demo</span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-collapse" role="presentation">
+                    <ul class="nav navbar-nav nav-pills navbar-right" role="menubar">
+                        <li uib-dropdown class=" pointer"  role="presentation">
+                            <a id="language-menu-item"  href="javascript:;" role="menuitem" uib-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+                                <span>
+                                    <span class="glyphicon glyphicon-flag"></span>
+                                    <span class="hidden-tablet">Language</span>
+                                    <b class="caret"></b>
+                                </span>
+                            </a>
+                            <ul uib-dropdown-menu  role="menu" aria-labelledby="language-menu-item">
+                                <li active-menu="{{language}}" ng-repeat="language in ctrl.languages" role="presentation">
+                                    <a href="" ng-click="ctrl.changeLanguage(language)"  role="menuitem">{{language}}</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav> -->
+
+
+        <md-content layout="column" layout-padding layout-align="center center">
+            <div layout="row">
+                <md-button class="md-primary" aria-label="Reset" ng-click="ctrl.resetBuilder()">
+                    Reset
+                </md-button>
+                <md-checkbox ng-model="ctrl.builderReadOnly" aria-label="Read only">
+                    Read only
+                </md-checkbox>
+            </div>
+            <mw-form-builder api="ctrl.formBuilder" options="ctrl.optionsBuilder" form-data="ctrl.formData" form-status="ctrl.formStatus" read-only="ctrl.builderReadOnly" on-image-selection="ctrl.onImageSelection()"></mw-form-builder>
+
+        </md-content>
+
+
+        <script src="../bower_components/angular/angular.js"></script>
+        <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> -->
+        <script src="../bower_components/angular-aria/angular-aria.js"></script>
+        <script src="../bower_components/angular-animate/angular-animate.js"></script>
+        <script src="../bower_components/angular-material/angular-material.js"></script>
+        <script src="../bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="../bower_components/angular-translate/angular-translate.min.js"></script>
+        <script src="../bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+        <script src="../bower_components/angular-elastic/elastic.js"></script>
+        <script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+        <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="../bower_components/Sortable/Sortable.min.js"></script>
+        <script src="../bower_components/Sortable/ng-sortable.js"></script>
+        <script src="../dist/form-utils.min.js"></script>
+        <script src="../dist/form-builder.min.js"></script>
+        <script src="../dist/form-viewer.min.js"></script>
+
+        <script src="demo.js"></script>
+
+
+    </body>
+</html>
